@@ -8,10 +8,10 @@ def password_generator(password_length):
     
     password= ''
     
-    gen = random.choices(string.hexdigits)
+    gen = random.choice(string.hexdigits)
     
     for i in range(password_length):
-        gen = str(random.choices(string.hexdigits)) 
+        gen = str(random.choice(string.hexdigits)) 
         password += gen
     
     return password
