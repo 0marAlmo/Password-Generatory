@@ -16,6 +16,17 @@ def password_generator(password_length):
     
     return password
 
-password_length = int(input("Enter the length of the password you would like: "))
+while True:
+    try:
+        
+        password_length = int(input("Enter the length of the password you would like: "))
+        
+        if password_length <= 0:
+            raise ValueError("Password length cannot be less than or equal to 0.")
+        
+        break
+
+    except (TypeError, ValueError):
+        print("That is not a valid password length.")
 
 print("Key generated:", password_generator(password_length))
